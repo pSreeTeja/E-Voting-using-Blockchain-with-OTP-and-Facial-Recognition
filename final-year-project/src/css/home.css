@@ -1,0 +1,40 @@
+.mainHomeDiv{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #727272;
+}
+.adminHomeDiv,.userHomeDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E2E2E2;
+    height:250px;
+    width:250px;
+    margin:32px;
+    border-radius: 5px;
+    padding-bottom:24px;
+}
+.adminImage,.peopleImage{
+    height: 150px;
+    margin:24px;
+}
+.adminTxt,.userTxt{
+    font-size:40px;
+    font-weight: bold;
+}
+.userHomeDiv:hover{
+    background-color: #c1c1c1;
+    margin-bottom: 40px;
+}
+.adminHomeDiv:hover{
+    background-color: #c1c1c1;
+    margin-bottom: 40px;
+}
+.userLinkAdmin,.adminLinkAdmin{
+    text-decoration: none;
+    color:black;
+}

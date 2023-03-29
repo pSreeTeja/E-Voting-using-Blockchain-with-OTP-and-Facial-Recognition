@@ -1,0 +1,30 @@
+.voterDetailsMainDiv{
+    display:flex;
+    flex-direction: column;
+    width:400px;
+    height: 200px;
+    background-color: red;
+}
+.voterDTopDiv{
+    height: 20%;
+    background-color: #A0A0A0;
+    font-weight: bold;
+    font-size:32px;
+    padding: 10px;
+}
+.voterDBottomDiv{
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    background-color: #E2E2E2;
+}
+.voterDBottomLeftDiv,.voterDBottomRightDiv{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size:24px;
+}
+.voterDDetails{
+    font-weight: bold;
+}

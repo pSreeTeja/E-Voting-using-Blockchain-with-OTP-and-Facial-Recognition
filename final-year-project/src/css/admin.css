@@ -1,0 +1,123 @@
+.mainDivAdmin{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    width:100vw;
+}
+.headingDivAdmin{
+    background-color: #727272;
+    height: 8%; 
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:12px;
+}
+.bottomDivAdmin{
+    height: 92%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.adminTxtAdmin{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+.passwordDivAdmin{
+    display:flex; 
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background-color: #E2E2E2;
+    height:250px;
+    width:400px;
+}
+.inputForPassAdmin{
+    border:none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height:40px;
+    width:90%;
+    outline: none;
+    border-radius: 2px;
+    font-size:40px;
+    padding:5px;
+}
+.passwordTxtDivAdmin{
+    display:flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.passwordTxtAdmin{
+    font-weight:bold;
+    color:#4E4E4E;
+    font-size:32px;
+    margin-left:4%;
+    margin-bottom: 5%;;
+    margin-top:1%;
+}
+.submitButtonAdmin{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    background-color: #898989;
+    border:none;
+    border-radius: 2px;
+    margin:20px;
+    padding:10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.submitButtonAdmin:hover{
+    background-color: #4E4E4E;
+    cursor: pointer;
+}
+
+/* AFTER LOGIN------------------------------------------------------ */
+.loginPageDiv{
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginPageButtons{
+    width:350px;
+    display: flex;
+    justify-content: space-between;
+    color:#4E4E4E;
+    font-size:32px;
+    font-weight:bold;
+    background-color: #E2E2E2;
+    border:none;
+    border-radius: 2px;
+    margin:20px;
+    text-decoration: none;
+    padding:25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.loginPageButtons:hover{
+    background-color: #4E4E4E;
+    color:white;
+    cursor: pointer;
+}
+
+.linkStyle{
+    width:350px;
+    font-size:32px;
+    text-decoration: none;
+    font-weight:bold;
+    padding:25px;   
+    color:#4E4E4E;
+    background-color: #E2E2E2;
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.linkStyle:hover{
+    background-color: #4E4E4E;
+    color:white;
+    cursor: pointer;
+}
+.linkDiv{
+    display: flex;
+    justify-content: space-between;
+}
