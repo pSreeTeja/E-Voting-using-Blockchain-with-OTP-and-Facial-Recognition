@@ -3,20 +3,21 @@
     flex-direction: column;
     width:400px;
     height: 200px;
-    background-color: red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .voterDTopDiv{
     height: 20%;
-    background-color: #A0A0A0;
     font-weight: bold;
     font-size:32px;
     padding: 10px;
+    background-color: rgba(242, 244, 246, 1);
+    border-bottom: 0.1px solid rgb(215, 215, 215);
 }
 .voterDBottomDiv{
     height: 80%;
     display: flex;
     flex-direction: row;
-    background-color: #E2E2E2;
+    
 }
 .voterDBottomLeftDiv,.voterDBottomRightDiv{
     padding: 10px;

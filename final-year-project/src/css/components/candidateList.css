@@ -1,15 +1,12 @@
 .candidateListMainDiv{
     width:100%;
     height: 100%;
-    /* background-color: purple; */
     overflow-y: auto;
     box-sizing: border-box;
-    /* padding:15px 10px; */
-
 }
 
 .candidateListTxtDiv{
-    background-color: #A0A0A0;
+    border-bottom:5px solid rgba(206, 206, 206, 0.9);
     padding:15px 0px;
     margin-bottom:10px;
     overflow-y:unset;

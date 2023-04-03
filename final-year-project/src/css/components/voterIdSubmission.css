@@ -3,9 +3,11 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    background-color: #E2E2E2;
+    /* background-color: #E2E2E2; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     height:250px;
     width:400px;
+    border-radius: 5px;
 }
 .passwordTxtDivVIDSub{
     display:flex;
@@ -14,34 +16,33 @@
 }
 .voterIDTxtVIDSub{
     font-weight:bold;
-    color:#4E4E4E;
+    color:black;
     font-size:28px;
     margin-left:4%;
     margin-bottom: 5%;;
     margin-top:1%;
 }
 .inputForPassVIDSub{
-    border:none;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border:0.1px solid rgb(215, 215, 215);
     height:40px;
     width:90%;
     outline: none;
-    border-radius: 2px;
-    font-size:24px; 
+    border-radius: 5px;
+    font-size:20px; 
     padding:5px;
 }
 .submitButtonVIDSub{
     color:white;
     font-size:20px;
     font-weight:bold;
-    background-color: #898989;
+    background-color: rgba(0,118,255,0.9);
     border:none;
-    border-radius: 2px;
+    border-radius: 5px;
     margin:20px;
     padding:10px 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .submitButtonVIDSub:hover{
-    background-color: #4E4E4E;
+    background-color: rgba(1, 71, 151, 0.9);
     cursor: pointer;
 }

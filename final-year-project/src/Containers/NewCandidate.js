@@ -68,17 +68,33 @@ class NewCandidate extends React.Component{
         })
     }
     handleSubmit=(e)=>{
-        e.preventDefault();
-        this.addCandidates();
+        if(this.state.candidate_name.trim().length!=0 && this.state.candidate_details.trim().length!=0){
+            e.preventDefault();
+            this.addCandidates();
+        }
     }
     
 
     render(){
         return(
             <div className="newCandidateMainDiv">
-                <input className="newCandInputs" placeholder='Candidate Name' id="candidate_name" onChange={(e)=>{this.setState({candidate_name:e.target.value})}}></input>
-                <input className="newCandInputs" placeholder='Candidate Party' id="candidate_details" onChange={(e)=>{this.setState({candidate_details:e.target.value})}}></input>
-                <button className='newCandAddBtn' onClick={this.handleSubmit}>Add</button>
+                <div className="navbar">
+                    <span className="navbarTxt">New Candidate</span>
+                </div>
+                <div className="bottomDiv newCandBottomDiv">
+                    <div className='newCandDetailsBoxDiv'>
+                        <div className='topAndBottomDiv'>
+                            <span className='txtsInNewCand'>Candidate Name</span>
+                            <input className="newCandInputs" id="candidate_name" onChange={(e)=>{this.setState({candidate_name:e.target.value})}}></input>
+                        </div>
+                        <div className='topAndBottomDiv'>
+                            <span className='txtsInNewCand'>Candidate Details</span>
+                            <input className="newCandInputs" id="candidate_details" onChange={(e)=>{this.setState({candidate_details:e.target.value})}}></input>
+                        </div>
+                        <button className='submitBtn btnNewCand' onClick={this.handleSubmit}>Add</button>
+                    </div>
+
+                </div>
             </div>
         )
     }

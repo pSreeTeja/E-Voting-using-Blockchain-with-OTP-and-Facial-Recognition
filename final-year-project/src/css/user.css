@@ -4,24 +4,10 @@
     height:100vh;
     width:100vw;
 }
-.headingDivUser{
-    background-color: #727272;
-    height: 8%; 
-    display:flex;
-    align-items:center;
-    padding-left:12px;
-}
-.userTxtUser{
-    color:white;
-    font-size:32px;
-    font-weight:bold;
-}
 .bottomDivUser{
-    display: flex;
     flex-direction: row;
-    height: 92%;
 }
-.leftDivUser{
+.leftDivUser{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +15,9 @@
 }
 .rightDivUser{
     width:65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: red; */
 
 }

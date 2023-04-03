@@ -3,28 +3,40 @@
     height: 100vh;   
     display: flex;
     flex-direction: column;
+}
+.newCandBottomDiv{
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.newCandDetailsBoxDiv{
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    background-color:rgba(242, 244, 246, 1);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-left:10px solid rgb(95, 95, 95);
+}
 .newCandInputs{
-    width:fit-content;
-    font-size: 32px;;
+    font-size: 18px;;
+    outline:none;
+    border-radius:5px;
+    border:0.1px solid rgb(183, 183, 183);
     padding:10px;
     margin:10px; 
 }
-.newCandAddBtn{
-    color:white;
-    font-size:25px;
-    font-weight:bold;
-    background-color: #898989;
-    border:none;
-    border-radius: 2px;
-    margin:20px;
-    padding:10px 15px;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.txtsInNewCand{
+    padding-left:5px;
+    font-size: 22px;
 }
-.newCandAddBtn:hover{
-    background-color: #4E4E4E;
-    cursor: pointer;
+.btnNewCand{
+    width:100px;
+}
+
+.topAndBottomDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

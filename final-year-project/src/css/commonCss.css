@@ -1,0 +1,46 @@
+.navbar{
+    height: 8%; 
+    display:flex;
+    align-items:center;
+    padding-left:12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.navbarTxt{
+    font-size:32px;
+    font-weight:bold;
+    border-left:10px solid rgba(0,118,255,0.9);
+    padding-left:5px;
+}
+.bottomDiv{
+    height: 92%;
+    display:flex;
+}
+.submitBtn{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    background-color: rgba(0,118,255,0.9);
+    border:none;
+    border-radius: 5px;
+    margin:20px;
+    padding:10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.logoutBtn{
+    background-color: rgba(174, 23, 0, 0.9);
+}
+.submitBtn:hover{
+    background-color: rgba(1, 71, 151, 0.9);
+    cursor: pointer;
+}
+.logoutBtn:hover{
+    background-color: rgba(226, 30, 0, 0.9);
+}
+.txt{
+    font-weight:bold;
+    color:black;
+    font-size:28px;
+    margin-left:4%;
+    margin-bottom: 5%;;
+    margin-top:1%;
+}

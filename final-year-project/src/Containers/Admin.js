@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/admin.css"
-import {ELECTION_ADDRESS,ELECTION_ABI} from "../config"
 class Admin extends React.Component{
     state={
         isAuth:false,
@@ -52,9 +51,9 @@ class Admin extends React.Component{
     render(){
         return(
             <div className="mainDivAdmin">
-                <div className="headingDivAdmin">
-                    <span className="adminTxtAdmin">Admin</span>
-                    {this.state.isAuth && <button className='submitButtonAdmin' onClick={this.logoutAdminAPI}>Logout</button>}</div>
+                <div className="navbar navbarAdmin">
+                    <span className="navbarTxt">Admin</span>
+                    {this.state.isAuth && <button className='submitBtn logoutBtn' onClick={this.logoutAdminAPI}>Logout</button>}</div>
                 {this.state.isAuth?
                     <div className='loginPageDiv'>
                         <Link to="" className="linkStyle">
@@ -74,14 +73,14 @@ class Admin extends React.Component{
                         </Link>
                     </div>
                     :
-                    <div className="bottomDivAdmin">
+                    <div className="bottomDiv bottomDivAdmin">
                         <div className='passwordDivAdmin'>
                             <div className="passwordTxtDivAdmin">         
                                 <span className='passwordTxtAdmin'>Password</span>                 
                             </div>
                             <input className='inputForPassAdmin' type='password' 
                             onChange={(e)=>{this.setState({pass:e.target.value})}} ></input>
-                            <button className='submitButtonAdmin' onClick={this.loginAPI}>Submit</button>
+                            <button className='submitBtn' onClick={this.loginAPI}>Submit</button>
                         </div>
                     </div>
                 }

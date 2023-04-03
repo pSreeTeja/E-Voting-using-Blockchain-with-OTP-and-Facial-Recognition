@@ -2,39 +2,52 @@
     height:100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
+}
+.bottomDivHome{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #727272;
+    height: 92%;
+}
+.userTxtUser{
+    color:black;
+    font-size:32px;
+    font-weight:bold;
 }
 .adminHomeDiv,.userHomeDiv{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #E2E2E2;
-    height:250px;
-    width:250px;
+    background-color: rgba(0,118,255,0.9);
+    height:200px;
+    width: 200px;
     margin:32px;
     border-radius: 5px;
     padding-bottom:24px;
 }
 .adminImage,.peopleImage{
-    height: 150px;
+    height: 100px;
     margin:24px;
 }
 .adminTxt,.userTxt{
-    font-size:40px;
+    font-size:32px;
     font-weight: bold;
 }
 .userHomeDiv:hover{
-    background-color: #c1c1c1;
+
     margin-bottom: 40px;
+    transition-duration: 0.2s;
+        background-color: rgba(1, 71, 151, 0.9);
 }
 .adminHomeDiv:hover{
-    background-color: #c1c1c1;
+    background-color: rgba(1, 71, 151, 0.9);
     margin-bottom: 40px;
+    transition-duration: 0.2s;
 }
 .userLinkAdmin,.adminLinkAdmin{
     text-decoration: none;
-    color:black;
+    color:white;
 }

@@ -1,21 +1,23 @@
  .candidateRowMainDiv{
-    background-color: #E9E9E9;
+    /* background-color: #E9E9E9; */
     border-radius: 2px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
     margin-bottom:10px;
-    height: 100px;
     box-sizing: border-box;
     padding:15px 10px;
+    background-color: rgba(242, 244, 246, 1);
     display: flex;
     align-items: center;
  }
  .cRowImageDiv{
-    display: flex;
+    display: flex; 
     justify-content: center;
     width:15%;
  }
  .partyImgCRow{
     height:80px;
+    border-radius: 100px;
+    background-color: rgb(175, 0, 0);
  }
  .cRowInfoDiv{
     width: 85%;
@@ -29,23 +31,23 @@
  .cRowPartyName{
     font-size:28px;
     font-weight: bold;
+    color:rgba(0,118,255,0.9);
  }
  .cRowCandidatename{
-    font-size: 24px;
-    font-weight: bold;
-    color:#4E4E4E;
+    font-size: 20px;
+    font-weight:500;
  }
  .voteButton{
     width:100px;
-    font-size:28px;
+    font-size:24px;
     color:white;
     font-weight: bold;
-    background-color: rgba(0,118,255,0.9);
+    background-color: rgba(113, 113, 113, 0.9);
     cursor: pointer;
     border:none;
     border-radius: 5px;
-    box-shadow: 0 6px 20px rgba(0,118,255,0.23);
  }
  .voteButton:hover{
-    background-color: #016bf6;
+   background-color: rgba(13, 156, 0, 0.9);
+   box-shadow: 0 6px 20px rgba(0, 88, 1, 0.23);
  }

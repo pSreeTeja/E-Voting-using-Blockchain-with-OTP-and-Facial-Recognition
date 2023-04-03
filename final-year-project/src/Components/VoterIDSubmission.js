@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "../css/components/voterIdSubmission.css"
-import {ELECTION_ADDRESS,ELECTION_ABI} from "../config";
-import Election from "../build/Election.json";
-import Web3 from 'web3';
+// import {ELECTION_ADDRESS,ELECTION_ABI} from "../config";
+// import Election from "../build/Election.json";
+// import Web3 from 'web3';
 
 class VoterIDSubmission extends React.Component{
     state={
@@ -33,14 +33,20 @@ class VoterIDSubmission extends React.Component{
         }
     }
     getVoterDetails=()=>{
+        window.localStorage.setItem('voterID',JSON.stringify(this.state.voterID))
         this.apiForVoterDetails().then((data)=>{
             console.log(data)
+            window.localStorage.setItem('voterID',JSON.stringify(data[0].voterID))
+            window.localStorage.setItem('name',JSON.stringify(data[0].name))
+            window.localStorage.setItem('age',JSON.stringify(data[0].age))
+            window.localStorage.setItem('gender',JSON.stringify(data[0].gender))
+            window.localStorage.setItem('phno',JSON.stringify(data[0].phno))
             this.props.setVoterDetails(data[0],this.state.statusCode);
         })
     } 
 
 
-    render(){ 
+    render(){  
         return(
         <div className='voterIDSubMainDiv'>
             <div className="passwordTxtDivVIDSub">         

@@ -1,0 +1,6 @@
+./final-year-project/node_modules
+./backend/node_modules
+./backend/labeled_images
+./backend/test_images
+./backend/uploads
+./backend/secret
