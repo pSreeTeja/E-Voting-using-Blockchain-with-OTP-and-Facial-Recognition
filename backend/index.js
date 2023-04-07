@@ -10,9 +10,9 @@ const secret=require("./secret/secret")
 const authenticate=require("./middleware/authenticate")
 const dbURL="mongodb+srv://Admin:admin123@blockchainevoting.erz5x26.mongodb.net/ProjectDatabase?retryWrites=true&w=majority"
 const multer=require("multer")
-var sid = "AC63e59a13daf4a3b1166d45a777fba4b4";
+var sid = secret.sid; 
 var auth_token=secret.auth_token;
-var verifySid = "VA99a00685d30ba1be42db06b136c03d03";
+var verifySid = secret.verifySid;
 var client = require("twilio")(sid, auth_token);
 
 mongoose.connect(dbURL,{ useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
