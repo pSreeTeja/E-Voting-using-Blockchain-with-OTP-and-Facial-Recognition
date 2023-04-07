@@ -10,6 +10,7 @@
     font-weight:bold;
     border-left:10px solid rgba(0,118,255,0.9);
     padding-left:5px;
+    text-shadow: 0px 3px 6px #00000029;
 }
 .bottomDiv{
     height: 92%;
@@ -42,5 +43,6 @@
     font-size:28px;
     margin-left:4%;
     margin-bottom: 5%;;
+    text-shadow: 0px 3px 6px #00000029;
     margin-top:1%;
 }

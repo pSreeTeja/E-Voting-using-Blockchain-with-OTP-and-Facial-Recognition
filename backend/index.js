@@ -7,15 +7,11 @@ const jwt=require("jsonwebtoken");
 const mongoose=require("mongoose")
 const VoterModel=require("./models/voterModel")
 const secret=require("./secret/secret")
-//facial Recog requires
-const faceapi=require("face-api.js")
-const multer=require("multer")
-//-------------------------------------------------------------------------------
 const authenticate=require("./middleware/authenticate")
 const dbURL="mongodb+srv://Admin:admin123@blockchainevoting.erz5x26.mongodb.net/ProjectDatabase?retryWrites=true&w=majority"
-
+const multer=require("multer")
 var sid = "AC63e59a13daf4a3b1166d45a777fba4b4";
-var auth_token = "217e307148327840799f2bc26f80957a";
+var auth_token=secret.auth_token;
 var verifySid = "VA99a00685d30ba1be42db06b136c03d03";
 var client = require("twilio")(sid, auth_token);
 
@@ -103,20 +99,6 @@ app.post("/verifyotp",(req,res)=>{
         res.send({status:verification_check.status}).status(200)
     })
 })
-//Facial Recognition
-app.post('/upload', upload.single('file'),async (req, res) => {
-    console.log(req.file);
-
-
-});
-
-
-
-
-
-
-
-
 
 
 

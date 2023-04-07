@@ -10,3 +10,21 @@
     align-items: center;
     flex-direction: column;
 }
+.loadingDiv{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loadingComponent{
+    
+}
+.errorMsg{
+    font-size: 24px;
+    font-weight: bold;
+    color:rgb(150, 0, 0);
+}

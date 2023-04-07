@@ -34,7 +34,7 @@ class OTP extends Component{
                 <div className='bottomDiv otpBottomDiv'>
                     <div className='otpInputBoxDiv'>
                         <span className="enterOTPTxt">Please enter the <b>OTP</b> sent to your Mobile No : {JSON.parse(window.localStorage.getItem('phno'))}</span>
-                        <input className="otpInput" onChange={(e)=>{this.setState({otp:e.target.value})}}></input>
+                        <input className="otpInput" type="password" onChange={(e)=>{this.setState({otp:e.target.value})}}></input>
                         <button className="submitBtn" onClick={this.verify}>Verify</button>
                     </div>
                 </div>

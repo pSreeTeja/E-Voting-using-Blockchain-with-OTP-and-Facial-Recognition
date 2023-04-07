@@ -1,0 +1,11 @@
+.voteDoneMainDiv{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.votedSuccessfullyTXT{
+    color:rgb(3, 183, 3);
+}

@@ -73,7 +73,7 @@ class CandidateList extends React.Component{
     vote= async(id)=>{
         window.location.assign("/verify/otp")
         await fetch("/getotp",
-        {
+        { 
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
