@@ -8,6 +8,7 @@ class VoterIDSubmission extends React.Component{
     state={
         voterID:"",
         statusCode:404,
+        alreadyVotedMsg:"",
     }
 
 
@@ -24,7 +25,13 @@ class VoterIDSubmission extends React.Component{
                 })
             })
             const data=await response.json();
+            if(data==null){
+                console.log("data is null") 
+            }
+            else
+            {
             this.state.statusCode=200;
+            }
             return data;
         }
         catch(err){
@@ -36,12 +43,17 @@ class VoterIDSubmission extends React.Component{
         window.localStorage.setItem('voterID',JSON.stringify(this.state.voterID))
         this.apiForVoterDetails().then((data)=>{
             console.log(data)
-            window.localStorage.setItem('voterID',JSON.stringify(data[0].voterID))
-            window.localStorage.setItem('name',JSON.stringify(data[0].name))
-            window.localStorage.setItem('age',JSON.stringify(data[0].age))
-            window.localStorage.setItem('gender',JSON.stringify(data[0].gender))
-            window.localStorage.setItem('phno',JSON.stringify(data[0].phno))
-            this.props.setVoterDetails(data[0],this.state.statusCode);
+            if(data==undefined){
+                this.setState({alreadyVotedMsg:"Already Voted. Please return to Home Screen"});
+            }
+            else{
+                window.localStorage.setItem('voterID',JSON.stringify(data[0].voterID))
+                window.localStorage.setItem('name',JSON.stringify(data[0].name))
+                window.localStorage.setItem('age',JSON.stringify(data[0].age))
+                window.localStorage.setItem('gender',JSON.stringify(data[0].gender))
+                window.localStorage.setItem('phno',JSON.stringify(data[0].phno))
+                this.props.setVoterDetails(data[0],this.state.statusCode);
+            }
         })
     } 
 
@@ -54,6 +66,7 @@ class VoterIDSubmission extends React.Component{
             </div>
             <input className='inputForPassVIDSub' onChange={(e)=>{this.setState({voterID:e.target.value})}}></input>
             <button className='submitButtonVIDSub' onClick={this.getVoterDetails}>Submit</button>
+            <span>{this.state.alreadyVotedMsg}</span>
         </div>
         )
     }

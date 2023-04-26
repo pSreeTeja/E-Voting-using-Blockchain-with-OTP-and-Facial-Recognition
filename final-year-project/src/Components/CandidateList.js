@@ -71,6 +71,7 @@ class CandidateList extends React.Component{
         }
     }
     vote= async(id)=>{
+        window.localStorage.setItem('candidateId',JSON.stringify(id))
         window.location.assign("/verify/otp")
         await fetch("/getotp",
         { 
@@ -85,15 +86,7 @@ class CandidateList extends React.Component{
         // console.log("id:"+id)
         // console.log(this.state.account);
         // console.log(this.state.statusCode)
-        // this.state.election.methods.vote(id).send(
-        //     { 
-        //         from: this.state.account , 
-        //         gasLimit:100000
-        //     }
-        // )
-        // .once('receipt', (receipt) => {
-        //     window.location.assign("/");
-        // })
+
     }
     
     render(){

@@ -9,10 +9,9 @@ class FacialRecogition extends Component{
         userImg:null,
         imageRef:React.createRef(),
         errorMsg:"",
-        isLoading:false
-        
+        isLoading:false,
     }
-    componentDidMount() {
+    async componentDidMount() {
         const voterID=window.localStorage.getItem("voterID")
         if(voterID==null){
             window.location.assign("/")
@@ -33,6 +32,7 @@ class FacialRecogition extends Component{
         loadModels();
 
     }
+  
     loadLabeledImages=()=>{
         console.log("loadLabeledImages")
         const labels=["Teja","MB","Suriya"]
@@ -69,8 +69,12 @@ class FacialRecogition extends Component{
             this.setState({isLoading:false,errorMsg:"Failed to recognize your face. Re-try again or consult Admin"})
         }
         else{
-            //vote blockchain code
-            window.location.assign("/verify/votedone");
+            //vote blockchain code-----------------------------------------
+            const id=JSON.parse(window.localStorage.getItem('candidateId'))
+            console.log("candidateId="+id)
+            this.props.handleVote(id,window.localStorage.getItem("voterID"))
+            //----------------------------------------------------------------------
+            // window.location.assign("/verify/votedone");
             window.localStorage.clear();
         }
     }

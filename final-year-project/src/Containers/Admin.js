@@ -56,14 +56,9 @@ class Admin extends React.Component{
                     {this.state.isAuth && <button className='submitBtn logoutBtn' onClick={this.logoutAdminAPI}>Logout</button>}</div>
                 {this.state.isAuth?
                     <div className='loginPageDiv'>
-                        <Link to="" className="linkStyle">
+                        <Link to="/admin/results" className="linkStyle">
                             <div className='linkDiv'>
-                                <span>New Election</span>  &gt;
-                            </div>
-                        </Link>
-                        <Link to="" className="linkStyle">
-                            <div className='linkDiv'>
-                                <span>Elections</span>  &gt;
+                                <span>Results</span>  &gt;
                             </div>
                         </Link>
                         <Link to="/admin/addcandidate" className="linkStyle">

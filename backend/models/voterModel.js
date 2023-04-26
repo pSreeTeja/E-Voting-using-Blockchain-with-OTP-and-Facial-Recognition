@@ -8,6 +8,7 @@ const VoterSchema = new mongoose.Schema(
     gender:{type:String,required:true},
     password:{type:String,required:false},
     phno:{type:String,required:true},
+    isVoted:{type:Boolean,required:true},
   },
   {collection:"VoterDetails"}
 );

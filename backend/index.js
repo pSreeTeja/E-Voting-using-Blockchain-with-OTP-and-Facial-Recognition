@@ -1,7 +1,5 @@
 const express=require("express")
 const app=express()
-const https = require('https');
-const bodyParser=require("body-parser")
 const cookieParser=require("cookie-parser")
 const jwt=require("jsonwebtoken");
 const mongoose=require("mongoose")
@@ -42,11 +40,23 @@ app.post("/createvoter",(req,res)=>{
     voterModel.gender=req.body.gender;
     voterModel.password=req.body.password;
     voterModel.phno=req.body.phno;
+    voterModel.isVoted=false;
     voterModel.save().then(()=>{res.status(200).send()}).catch((err)=>{console.log(error)});
 })
 app.post("/getvoterdetails",(req,res)=>{
     console.log(req.body.voterID);
-    VoterModel.find({voterID:req.body.voterID}).then((data)=>{res.status(200).send(data)}).catch(err=>{console.log(err)});
+    VoterModel.find({voterID:req.body.voterID})
+    .then((data)=>
+        {
+            if(!data[0].isVoted){
+                res.status(200).send(data)
+            }
+            else{
+                res.status(400).send(null)
+            }
+
+        }
+    ).catch(err=>{console.log(err)});
 })
 app.post("/login",async (req,res)=>{
     console.log("in login")
@@ -100,7 +110,12 @@ app.post("/verifyotp",(req,res)=>{
     })
 })
 
-
+//mark as voted
+app.post("/markvoted",async (req,res)=>{
+    console.log("markvoted backend called with voter ID: "+req.body.voterID)
+    await VoterModel.findOneAndUpdate({voterID:req.body.voterID},{$set:{isVoted:true}});
+    res.status(200).send()
+})
 
 
 
