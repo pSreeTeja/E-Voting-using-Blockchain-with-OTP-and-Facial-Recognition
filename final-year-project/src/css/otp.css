@@ -21,7 +21,7 @@
     height: 30%;
 }
 .enterOTPTxt{
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
 }
 .otpInput{
@@ -31,4 +31,9 @@
     border-radius: 5px;
     font-size:20px; 
     padding:5px;
+}
+.errorOTPMsg{
+    margin-bottom: 10px;
+    color:rgb(177, 0, 0);
+    font-weight: bold;
 }

@@ -4,7 +4,8 @@ import "../css/admin.css"
 class Admin extends React.Component{
     state={
         isAuth:false,
-        pass:""
+        pass:"",
+        status:"",
     }
     componentDidMount=async()=>{
         const res=await fetch("/isauth",{
@@ -35,6 +36,9 @@ class Admin extends React.Component{
             if(res.status===200){
                 this.setState({isAuth:true});
             }
+            else{
+                this.setState({status:"Incorrect Password. Please try again."})
+            }
         })
     }
     logoutAdminAPI=async()=>{
@@ -47,7 +51,7 @@ class Admin extends React.Component{
         }).then(()=>{
             this.setState({isAuth:false});
         })
-    }
+    } 
     render(){
         return(
             <div className="mainDivAdmin">
@@ -76,6 +80,7 @@ class Admin extends React.Component{
                             <input className='inputForPassAdmin' type='password' 
                             onChange={(e)=>{this.setState({pass:e.target.value})}} ></input>
                             <button className='submitBtn' onClick={this.loginAPI}>Submit</button>
+                            <span className='errorMsgAdmin'>{this.state.status}</span>
                         </div>
                     </div>
                 }

@@ -3,6 +3,7 @@ import "../css/otp.css"
 class OTP extends Component{
     state={
         otp:"",
+        status:"",
     }
     verify=async ()=>{
         console.log("hello from verify")
@@ -19,10 +20,11 @@ class OTP extends Component{
         }
         )
         const data=await res.json();
-        // console.log("logging data below");
-        // console.log(data)
         if(data.status==="approved"){
             window.location.assign("/verify/facialrecog")
+        }
+        else{
+            this.setState({status:"Incorrect OTP. Please Try Again"})
         }
     }
     render(){
@@ -36,6 +38,7 @@ class OTP extends Component{
                         <span className="enterOTPTxt">Please enter the <b>OTP</b> sent to your Mobile No : {JSON.parse(window.localStorage.getItem('phno'))}</span>
                         <input className="otpInput" type="password" onChange={(e)=>{this.setState({otp:e.target.value})}}></input>
                         <button className="submitBtn" onClick={this.verify}>Verify</button>
+                        <span className='errorOTPMsg'>{this.state.status}</span>
                     </div>
                 </div>
             </div>
